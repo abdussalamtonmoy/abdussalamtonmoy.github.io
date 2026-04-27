@@ -287,18 +287,22 @@ nav ul li a:hover::after {
 }
 
 .slider-container {
-    background: var(--bg-card);
+    background: #000; /* Dark background to highlight the full image */
     border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid var(--glass-border);
     position: relative;
     box-shadow: var(--shadow);
+    height: 700px; /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slider img {
     width: 100%;
-    aspect-ratio: 4/5;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
 }
 
 .slider-nav button {
@@ -435,6 +439,9 @@ footer .footer-nav a:hover {
     }
     .hero h1 {
         font-size: 2.5rem;
+    }
+    .slider-container {
+        height: 450px;
     }
 }
 
