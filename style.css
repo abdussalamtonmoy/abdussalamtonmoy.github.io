@@ -287,13 +287,13 @@ nav ul li a:hover::after {
 }
 
 .slider-container {
-    background: #000; /* Dark background to highlight the full image */
+    background: #000;
     border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid var(--glass-border);
     position: relative;
     box-shadow: var(--shadow);
-    height: 700px; /* Fixed height for consistency */
+    height: 85vh; /* Use viewport height for better responsiveness across all devices */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -439,9 +439,6 @@ footer .footer-nav a:hover {
     }
     .hero h1 {
         font-size: 2.5rem;
-    }
-    .slider-container {
-        height: 450px;
     }
 }
 
