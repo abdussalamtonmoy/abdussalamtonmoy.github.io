@@ -3,175 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Abdus Salam Tonmoy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>About Me | Abdus Salam Tonmoy</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Global Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-
-        header {
-            background: linear-gradient(90deg, #007bff, #0056b3);
-            padding: 1em 0;
-            text-align: center;
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        header nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        header nav ul li a:hover {
-            color: #ffcc00;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #f4f4f4, #ffffff);
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 700px;
+        .bio-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 1px solid var(--glass-border);
+            max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
-            color: #333;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease-out;
         }
-
-        .hero-content h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-            color: #007bff;
-        }
-
-        .hero-content p {
+        .bio-text {
             font-size: 1.2rem;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .hero-content strong {
-            color: #0056b3;
-            font-weight: 600;
-        }
-
-        .hero-content .btn {
-            background: #007bff;
-            color: #fff;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .hero-content .btn:hover {
-            background: #0056b3;
-            transform: translateY(-5px);
-        }
-
-        /* Gallery and Slider Styles */
-        .gallery-section {
+            color: var(--text-main);
             text-align: center;
-            margin-top: 20px;
+            line-height: 1.8;
         }
-
-        .gallery-section .section-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #007bff;
+        .bio-text br {
+            margin-bottom: 10px;
         }
-
-        /* Slider Container */
-        .slider-container {
-            position: relative;
-            width: 100%;
-            margin: 0 auto;
-            max-width: 1000px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .slider {
-            display: flex;
-            transition: transform 1s ease-in-out;
-        }
-
-        .slider img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 25px;  /* Increased border-radius for more rounded corners */
-            display: block; /* Ensuring images are displayed */
-        }
-
-        /* Slider Navigation */
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-
-        .slider-nav button {
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .slider-nav button:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Hobbies List */
-        .hobby-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .hobby-list li {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        /* Passion Section (Text positioning) */
-        .passion {
-            margin-top: 30px;
-            padding-bottom: 20px;
-        }
-
     </style>
 </head>
 <body>
@@ -189,71 +45,81 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>About Me</h1>
-
-                <div class="bio">
-                    <p>I am Tonmoy.<br>
-                    A model and an artist who believes in owning every moment.<br>
-                    I don’t just stand in front of the camera I bring energy, attitude and vision.<br>
-                    I am not here to fit in I am here to stand out and leave a mark.<br>
-                    This is more than a passion this is who I am.</p>
+                <div class="bio-card">
+                    <p class="bio-text">
+                        I am Tonmoy.<br>
+                        A model and an artist who believes in owning every moment.<br>
+                        I don’t just stand in front of the camera, I bring energy, attitude, and vision.<br>
+                        I am not here to fit in; I am here to stand out and leave a mark.<br>
+                        This is more than a passion, this is who I am.
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Gallery Section -->
         <section class="gallery-section">
-            <h2 class="section-title">Gallery</h2>
+            <h2 class="section-title">Gallery Showcase</h2>
             <div class="slider-container">
-                <div class="slider">
+                <div class="slider" id="imageSlider">
                     <img src="WhatsApp Image 2026-04-27 at 01.24.30.jpeg" alt="Gallery Image 1">
                     <img src="WhatsApp Image 2026-04-27 at 01.24.30 (1).jpeg" alt="Gallery Image 2">
                     <img src="WhatsApp Image 2026-04-27 at 02.26.39.jpeg" alt="Gallery Image 3">
                     <img src="WhatsApp Image 2026-04-27 at 02.26.39 (1).jpeg" alt="Gallery Image 4">
                 </div>
                 <div class="slider-nav">
-                    <button id="prev-btn">&#10094;</button>
-                    <button id="next-btn">&#10095;</button>
+                    <button id="prev-btn" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%);">&#10094;</button>
+                    <button id="next-btn" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">&#10095;</button>
                 </div>
             </div>
         </section>
     </main>
 
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="podcast.html">My Works</a>
+        </div>
+        <p>&copy; 2026 Abdus Salam Tonmoy. All rights reserved.</p>
+    </footer>
+
     <script>
-        const slider = document.querySelector('.slider');
+        // Scroll Reveal Animation
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
         const images = document.querySelectorAll('.slider img');
         const nextBtn = document.getElementById('next-btn');
         const prevBtn = document.getElementById('prev-btn');
         let index = 0;
 
-        // Function to update the slider
         const updateSlider = () => {
-            // Hide all images
-            images.forEach(img => {
-                img.style.display = 'none';
+            images.forEach((img, i) => {
+                img.style.display = i === index ? 'block' : 'none';
             });
-            // Show the current image
-            images[index].style.display = 'block';
         };
 
-        // Next button functionality
         nextBtn.addEventListener('click', () => {
             index = (index + 1) % images.length;
             updateSlider();
         });
 
-        // Previous button functionality
         prevBtn.addEventListener('click', () => {
             index = (index - 1 + images.length) % images.length;
             updateSlider();
         });
 
-        // Auto-slide every 3 seconds
         setInterval(() => {
             index = (index + 1) % images.length;
             updateSlider();
-        }, 3000);
+        }, 4000);
 
-        // Initial call to display the first image
         updateSlider();
     </script>
 </body>
