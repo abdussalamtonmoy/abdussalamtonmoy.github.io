@@ -2,356 +2,141 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdus Salam Tonmoy</title>
-<!-- Link to Google Fonts for Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<!-- Link to Font Awesome for Social Media Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-<style>
-/* Global Styles */
-body {
-font-family: 'Poppins', sans-serif;
-margin: 0;
-padding: 0;
-color: #333;
-background-color: #f8f9fa;
-}
-
-header {
-background: linear-gradient(90deg, #007bff, #0056b3);
-padding: 1em 0;
-text-align: center;
-}
-
-header nav ul {
-list-style: none;
-padding: 0;
-}
-
-header nav ul li {
-display: inline-block;
-margin: 0 15px;
-}
-
-header nav ul li a {
-color: #fff;
-text-decoration: none;
-font-weight: 600;
-font-size: 1rem;
-transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-color: #ffcc00;
-}
-
-/* Hero Section */
-.hero {
-text-align: center;
-padding: 60px 20px;
-background: linear-gradient(135deg, #f4f4f4, #ffffff);
-position: relative;
-}
-
-.hero-content {
-max-width: 700px;
-margin: 0 auto;
-position: relative;
-z-index: 2;
-color: #333;
-}
-
-.hero-content h1 {
-font-size: 2.8rem;
-margin-bottom: 15px;
-font-weight: 700;
-color: #007bff;
-}
-
-.hero-content p {
-font-size: 1.2rem;
-margin-bottom: 30px;
-line-height: 1.6;
-}
-
-.hero-content strong {
-color: #0056b3;
-font-weight: 600;
-}
-
-.hero-content .btn {
-background: #007bff;
-color: #fff;
-padding: 12px 25px;
-text-decoration: none;
-border-radius: 50px;
-font-size: 1rem;
-font-weight: 600;
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-transition: background 0.3s ease, transform 0.2s ease;
-display: inline-block;
-margin: 15px auto;
-}
-
-.hero-content .btn:hover {
-background: #0056b3;
-transform: translateY(-5px);
-}
-
-/* Profile Picture Styling */
-.profile-picture {
-width: 180px;
-height: 180px;
-margin: 0 auto 20px;
-border-radius: 50%;
-overflow: hidden;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-animation: float 3s ease-in-out infinite;
-}
-
-.profile-picture img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-/* Social Links */
-.social-links {
-margin-top: 25px;
-}
-
-.social-links a {
-margin: 0 15px;
-color: #007bff;
-font-size: 2rem;
-transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.social-links a:hover {
-color: #0056b3;
-transform: scale(1.1);
-}
-
-/* Animation */
-@keyframes float {
-0%,
-100% {
-transform: translateY(0);
-}
-
-50% {
-transform: translateY(-10px);
-}
-}
-
-/* Modal Styles */
-.contact-modal {
-display: none;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.5);
-justify-content: center;
-align-items: center;
-z-index: 1000;
-animation: fadeIn 0.5s ease-in-out;
-}
-
-.modal-content {
-background: #fff;
-padding: 30px;
-text-align: center;
-max-width: 400px;
-width: 90%;
-border-radius: 10px;
-}
-
-.modal-content img {
-width: 100px;
-height: 100px;
-border-radius: 50%;
-margin-bottom: 20px;
-}
-
-.modal-content h3 {
-margin-bottom: 20px;
-font-size: 1.4rem;
-color: #007bff;
-}
-
-.modal-content input {
-width: 100%;
-padding: 10px;
-margin: 10px 0;
-border: 1px solid #ccc;
-border-radius: 5px;
-font-size: 1rem;
-}
-
-.modal-content button {
-background: #007bff;
-color: white;
-padding: 10px 20px;
-border: none;
-border-radius: 50px;
-font-size: 1rem;
-cursor: pointer;
-transition: background 0.3s ease;
-}
-
-.modal-content button:hover {
-background: #0056b3;
-}
-
-.close-modal-btn {
-position: absolute;
-top: 10px;
-right: 10px;
-font-size: 2rem;
-cursor: pointer;
-color: #007bff;
-}
-
-@keyframes fadeIn {
-0% {
-opacity: 0;
-}
-
-100% {
-opacity: 1;
-}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdus Salam Tonmoy | Portfolio</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<header>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Me</a></li>
-<li><a href="podcast.html">My Works</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<section class="hero">
-<div class="hero-content">
-<div class="profile-picture">
-<img src="WhatsApp Image 2026-04-27 at 01.24.29.jpeg" alt="Abdus Salam Tonmoy">
-</div>
-<h1>Abdus Salam Tonmoy</h1>
-<button class="btn exchange-contact-btn">Exchange Contact</button>
-<p>Dm for commission & business enquiries</p>
-<h2><strong>About:</strong></h2>
-<p>Fashion | Model | Artist</p>
-<a href="Abdus Salam Tonmoy CV.pdf.pdf" class="btn" download>Download My CV</a>
-</div>
-<div class="social-links">
-<a href="https://www.facebook.com/abdussalammahmoodtonmoy" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/abdus.salam.tonmoy" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.tiktok.com/@abdus.salam.tonmoy" target="_blank"><i class="fab fa-tiktok"></i></a>
-<a href="https://www.linkedin.com/in/abdus-salam-mahmood-tonmoy-3605ab276/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-<a href="https://www.youtube.com/@abdussalamtonmoy" target="_blank"><i class="fab fa-youtube"></i></a>
-</div>
-</section>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="podcast.html">My Works</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Modal for Exchange Contact -->
-<div class="contact-modal">
-<div class="modal-content">
-<img src="WhatsApp Image 2026-04-27 at 01.24.29.jpeg" alt="Abdus Salam Tonmoy">
-<h3>Share your contact info with Abdus Salam Tonmoy</h3>
-<form id="contact-form">
-<input type="text" id="full-name" placeholder="Full Name" required>
-<input type="tel" id="phone-number" placeholder="Phone Number" required>
-<button type="submit" class="btn">Exchange Contact</button>
-</form>
-<span class="close-modal-btn">&times;</span>
-</div>
-</div>
-</main>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="profile-picture">
+                    <img src="WhatsApp Image 2026-04-27 at 01.24.29.jpeg" alt="Abdus Salam Tonmoy">
+                </div>
+                <h1>Abdus Salam Tonmoy</h1>
+                <h2>Fashion | Model | Artist</h2>
+                <p>Capturing vision through attitude and energy. Open for commissions and business enquiries worldwide.</p>
+                
+                <div class="cta-group">
+                    <button class="btn exchange-contact-btn">Exchange Contact</button>
+                    <a href="Abdus Salam Tonmoy CV.pdf.pdf" class="btn btn-outline" download>Download CV</a>
+                </div>
 
-<script>
-// JavaScript to handle modal functionality
-document.querySelector('.exchange-contact-btn').addEventListener('click', function () {
-document.querySelector('.contact-modal').style.display = 'flex';
-});
+                <div class="social-links">
+                    <a href="https://www.facebook.com/abdussalammahmoodtonmoy" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/abdus.salam.tonmoy" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@abdus.salam.tonmoy" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/in/abdus-salam-mahmood-tonmoy-3605ab276/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@abdussalamtonmoy" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </section>
 
-document.querySelector('.close-modal-btn').addEventListener('click', function () {
-document.querySelector('.contact-modal').style.display = 'none';
-});
+        <!-- Modal for Exchange Contact -->
+        <div class="contact-modal" id="contactModal">
+            <div class="modal-content">
+                <span class="close-modal-btn">&times;</span>
+                <div class="profile-picture" style="width: 100px; height: 100px; margin-bottom: 20px;">
+                    <img src="WhatsApp Image 2026-04-27 at 01.24.29.jpeg" alt="Tonmoy">
+                </div>
+                <h3>Connect with me</h3>
+                <p style="margin-bottom: 20px; color: var(--text-muted);">Share your contact info to receive my VCF</p>
+                <form id="contact-form">
+                    <input type="text" id="full-name" placeholder="Your Name" required>
+                    <input type="tel" id="phone-number" placeholder="Phone Number" required>
+                    <button type="submit" class="btn" style="width: 100%; margin: 10px 0;">Exchange Now</button>
+                </form>
+            </div>
+        </div>
+    </main>
 
-// Handle form submission
-document.querySelector('#contact-form').addEventListener('submit', function (e) {
-e.preventDefault(); // Prevent the form from refreshing the page
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="podcast.html">My Works</a>
+        </div>
+        <p>&copy; 2026 Abdus Salam Tonmoy. All rights reserved.</p>
+    </footer>
 
-// Get the values of the form fields
-const fullName = document.querySelector('#full-name').value;
-const phoneNumber = document.querySelector('#phone-number').value;
+    <script>
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-// Send the information to Telegram bot
-sendToTelegramBot(fullName, phoneNumber);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
 
-// Trigger the image download (thanks.jpg)
-const link = document.createElement('a');
-link.href = 'Abdus Salam Tonmoy.vcf'; // Path to the "thanks.jpg" file
-link.download = 'Abdus Salam Tonmoy.vcf'; // Suggest the filename for the download
-link.click(); // Simulate a click to trigger the download
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Optionally, show an alert or notification
-alert('Contact Information Submitted!');
+        const modal = document.getElementById('contactModal');
+        const btn = document.querySelector('.exchange-contact-btn');
+        const span = document.querySelector('.close-modal-btn');
 
-// Close the modal after submission
-document.querySelector('.contact-modal').style.display = 'none';
-});
+        btn.onclick = () => modal.style.display = 'flex';
+        span.onclick = () => modal.style.display = 'none';
+        window.onclick = (event) => {
+            if (event.target == modal) modal.style.display = 'none';
+        }
 
-// Function to send the data to Telegram bot
-function sendToTelegramBot(fullName, phoneNumber) {
-const botToken = '8003330617:AAGalw4s5uXRtLCUAxxRDptqs1w6l1qPEe0'; // Replace with your bot's API token
-const chatId = '5053050750'; // Replace with your Telegram chat ID
+        // Handle form submission
+        document.querySelector('#contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            const fullName = document.querySelector('#full-name').value;
+            const phoneNumber = document.querySelector('#phone-number').value;
 
-// Prepare the message text
-const message = `New Contact Info:\nFull Name: ${fullName}\nPhone Number: ${phoneNumber}`;
+            sendToTelegramBot(fullName, phoneNumber);
 
-// Telegram Bot API URL
-const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+            // Download VCF
+            const link = document.createElement('a');
+            link.href = 'Abdus Salam Tonmoy.vcf';
+            link.download = 'Abdus Salam Tonmoy.vcf';
+            link.click();
 
-// Prepare the data to send to the Telegram Bot API
-const data = {
-chat_id: chatId,
-text: message,
-parse_mode: 'HTML'
-};
+            alert('Thank you! Contact information shared.');
+            modal.style.display = 'none';
+        });
 
-// Send the request to Telegram Bot API using fetch
-fetch(url, {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json'
-},
-body: JSON.stringify(data)
-})
-.then(response => response.json())
-.then(data => {
-if (data.ok) {
-console.log('Message sent successfully');
-} else {
-console.log('Error:', data);
-}
-})
-.catch(error => {
-console.error('Error:', error);
-});
-}
-</script>
+        function sendToTelegramBot(fullName, phoneNumber) {
+            const botToken = '8003330617:AAGalw4s5uXRtLCUAxxRDptqs1w6l1qPEe0';
+            const chatId = '5053050750';
+            const message = `<b>New Lead!</b>\nName: ${fullName}\nPhone: ${phoneNumber}`;
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-
+            fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            });
+        }
+    </script>
 </body>
-
 </html>
