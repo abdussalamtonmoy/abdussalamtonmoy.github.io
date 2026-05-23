@@ -18,6 +18,19 @@
     <div class="cursor-glow"></div>
     <div class="scroll-progress"></div>
     <div class="grain-overlay"></div>
+
+    <a href="https://wa.me/8801955968095" target="_blank" rel="noopener" class="floating-notice" id="floatingNotice">
+        <button type="button" class="floating-notice-close" aria-label="Close notice">&times;</button>
+        <div class="floating-notice-inner">
+            <span class="pulse-dot"></span>
+            <div class="floating-notice-text">
+                <span class="badge-label">Available for Work</span>
+                <span class="badge-text">OVC &middot; TVC &middot; Brand Campaigns</span>
+            </div>
+            <span class="badge-cta"><i class="fab fa-whatsapp"></i> +880 1955-968095</span>
+        </div>
+    </a>
+
     <header>
         <nav>
             <ul>
@@ -97,6 +110,22 @@
                 progressBar.style.width = scrolled + '%';
             });
         }
+
+        // Floating availability notice — dismiss
+        (function () {
+            const notice = document.getElementById('floatingNotice');
+            if (!notice) return;
+            try { sessionStorage.removeItem('noticeDismissed'); } catch (e) {}
+            const closeBtn = notice.querySelector('.floating-notice-close');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    notice.classList.add('hidden');
+                    setTimeout(() => { notice.style.display = 'none'; }, 450);
+                });
+            }
+        })();
 
         // Scroll Reveal Animation
         const observerOptions = {
