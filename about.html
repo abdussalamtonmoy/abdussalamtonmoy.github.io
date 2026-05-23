@@ -31,6 +31,10 @@
     </style>
 </head>
 <body>
+    <div class="floating-blobs"><span></span><span></span><span></span></div>
+    <div class="cursor-glow"></div>
+    <div class="scroll-progress"></div>
+    <div class="grain-overlay"></div>
     <header>
         <nav>
             <ul>
@@ -84,9 +88,26 @@
             <a href="podcast.html">My Works</a>
         </div>
         <p>&copy; 2026 Abdus Salam Tonmoy. All rights reserved.</p>
+        <p class="developer-credit">Developed By <a href="https://wa.me/8801410199221" target="_blank" rel="noopener">Abdur Rahman</a></p>
     </footer>
 
     <script>
+        // Cursor glow follow
+        const cursorGlow = document.querySelector('.cursor-glow');
+        if (cursorGlow) {
+            window.addEventListener('mousemove', (e) => {
+                cursorGlow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+            });
+        }
+        // Scroll progress bar
+        const progressBar = document.querySelector('.scroll-progress');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
         // Scroll Reveal Animation
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
