@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="floating-blobs"><span></span><span></span><span></span></div>
+    <div class="cursor-glow"></div>
+    <div class="scroll-progress"></div>
+    <div class="grain-overlay"></div>
     <header>
         <nav>
             <ul>
@@ -43,18 +47,6 @@
 
                     <div class="video-wrapper reveal">
                         <video controls preload="metadata">
-                            <source src="WhatsApp Video 2026-05-08 at 02.18.21.mp4#t=0.001" type="video/mp4">
-                            Your browser does not support the video element.
-                        </video>
-                        <div style="margin-top: 15px;">
-                            <a href="https://www.facebook.com/share/r/1EJWfQ25hy/" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
-                                <i class="fab fa-facebook"></i> Watch on Facebook
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="video-wrapper reveal">
-                        <video controls preload="metadata">
                             <source src="WhatsApp Video 2026-04-27 at 01.21.40.mp4#t=0.001" type="video/mp4">
                             Your browser does not support the video element.
                         </video>
@@ -67,14 +59,16 @@
 
                     <div class="video-wrapper reveal">
                         <video controls preload="metadata">
-                            <source src="WhatsApp Video 2026-04-27 at 01.21.40 (1).mp4#t=0.001" type="video/mp4">
+                            <source src="WhatsApp Video 2026-05-23 at 23.44.10.mp4#t=0.001" type="video/mp4">
                             Your browser does not support the video element.
                         </video>
-                        <div style="margin-top: 15px;">
-                            <a href="https://www.facebook.com/share/r/1c5QxENx8m/" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
-                                <i class="fab fa-facebook"></i> Watch on Facebook
-                            </a>
-                        </div>
+                    </div>
+
+                    <div class="video-wrapper reveal">
+                        <video controls preload="metadata">
+                            <source src="WhatsApp Video 2026-05-23 at 23.44.09.mp4#t=0.001" type="video/mp4">
+                            Your browser does not support the video element.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -88,9 +82,26 @@
             <a href="podcast.html">My Works</a>
         </div>
         <p>&copy; 2026 Abdus Salam Tonmoy. All rights reserved.</p>
+        <p class="developer-credit">Developed By <a href="https://wa.me/8801410199221" target="_blank" rel="noopener">Abdur Rahman</a></p>
     </footer>
 
     <script>
+        // Cursor glow follow
+        const cursorGlow = document.querySelector('.cursor-glow');
+        if (cursorGlow) {
+            window.addEventListener('mousemove', (e) => {
+                cursorGlow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+            });
+        }
+        // Scroll progress bar
+        const progressBar = document.querySelector('.scroll-progress');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
         // Scroll Reveal Animation
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
