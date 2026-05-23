@@ -115,17 +115,23 @@
             });
         }
 
-        // Floating availability notice — dismiss
+        // Floating availability notice — show once, dismiss persists
         (function () {
             const notice = document.getElementById('floatingNotice');
             if (!notice) return;
-            try { sessionStorage.removeItem('noticeDismissed'); } catch (e) {}
+            try {
+                if (localStorage.getItem('noticeDismissed') === '1') {
+                    notice.style.display = 'none';
+                    return;
+                }
+            } catch (e) {}
             const closeBtn = notice.querySelector('.floating-notice-close');
             if (closeBtn) {
                 closeBtn.addEventListener('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     notice.classList.add('hidden');
+                    try { localStorage.setItem('noticeDismissed', '1'); } catch (err) {}
                     setTimeout(() => { notice.style.display = 'none'; }, 450);
                 });
             }
