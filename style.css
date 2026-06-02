@@ -192,6 +192,91 @@ body::after {
     color: #1a1306;
 }
 
+/* --- Promo Banner --- */
+.top-banner-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.promo-banner {
+    width: 100%;
+    background: linear-gradient(135deg, #11141c 0%, #1a1a2e 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.promo-content {
+    flex: 1;
+    max-width: 1200px;
+}
+
+.promo-content h3 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    font-weight: 800;
+}
+
+.promo-content p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.promo-banner .highlight {
+    color: var(--accent);
+}
+
+.promo-contact {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 6px 15px;
+    white-space: nowrap;
+    transition: var(--t);
+}
+
+.promo-contact:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+}
+
+.promo-contact a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.promo-contact a i,
+.promo-contact a span {
+    color: var(--accent);
+}
+
+@media (max-width: 900px) {
+    .promo-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .promo-contact {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 /* --- Navigation --- */
 header {
     position: sticky;
