@@ -27,7 +27,11 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
 body {
     font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -269,6 +273,10 @@ body::after {
         flex-direction: column;
         text-align: center;
         padding: 20px;
+    }
+    .promo-content h3 {
+        font-size: 1rem;
+        font-weight: 800;
     }
     .promo-contact {
         width: 100%;
